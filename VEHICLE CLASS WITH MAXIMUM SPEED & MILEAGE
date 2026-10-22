@@ -1,0 +1,12 @@
+class Vehicle: 
+def   init  (self,name,max_speed,mileage): 
+self.name = name 
+self.speed = max_speed 
+self.mileage = mileage 
+ 
+car = Vehicle("BMW",120,23) 
+ 
+ 
+print("Model: ", car.name) 
+print("Maximum Speed: ", car.speed ,"km/hrs") 
+print("Mileage: ", car.mileage ,"km/lrs")
