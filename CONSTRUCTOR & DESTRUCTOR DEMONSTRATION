@@ -1,0 +1,17 @@
+SOURCE CODE: 
+ 
+class Student: 
+def   init  (self,name): 
+self.name = name 
+print("Constructor Called...!") 
+print("Student Name is ",self.name) 
+print("Object created") 
+ 
+def   del  (self): 
+print("Destructor Called. .. !") 
+print("Object deleted") 
+ 
+ 
+ 
+s1 = Student("Naruto Utsumaki") 
+del s1
