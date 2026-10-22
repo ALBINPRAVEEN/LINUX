@@ -26,3 +26,35 @@ conn.execute(sql)
 conn.commit() 
 print("\nRecords inserted") 
 conn.close()
+
+
+3) Display Data in Sqlite 
+import sqlite3 
+conn=sqlite3.connect('macfast.db') 
+print('opened database') 
+print('displaying  data') 
+print("\n. ........... ") 
+result=conn.execute("select * from student") 
+print("Rollno|Name|Marks")     
+print("\n. ........... ") 
+for i in result: 
+print("%6s|%-15s|%3s"%(i[0],i[1],i[2])) 
+print("\n. .......... ") 
+conn.close() 
+ 
+ 
+4) Delete Data in Sqlite 
+import sqlite3 
+conn=sqlite3.connect('macfast.db') 
+print("opened database") 
+print("Deleting  data") 
+print("\n. ......... ") 
+result=conn.execute('''DELETE from student where rollno=3;''') 
+print("Rollno|Name|Marks") 
+print("\n. ......... ") 
+data=conn.execute("select * from student") 
+for i in data: 
+print(i) 
+print("\n. ........ ") 
+conn.commit() 
+conn.close()
