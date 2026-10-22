@@ -1,0 +1,28 @@
+AIM: Develop programs to perform operations on SQLITE3 
+ 
+SOURCE CODE: 
+1) Create a Sqlite 
+import sqlite3 
+conn=sqlite3.connect('macfast.db') 
+print("Opened database") 
+sql="create table student(rollno int(3),name varchar(30),mark int(3))" 
+conn.execute(sql) 
+print("Table created") 
+conn.close() 
+ 
+2) Insert Data into Sqlite 
+import sqlite3 
+conn=sqlite3.connect('macfast.db') 
+print("Opened database") 
+while 1: 
+rollno=input("enter rollno(enter 0 for exit):") 
+if int(rollno)==0: 
+break 
+name=input("Enter name:") 
+mark=input("Enter mark") 
+sql="insert into student values(%s,'%s',%s)\n"%(rollno,name,mark) 
+print(sql) 
+conn.execute(sql) 
+conn.commit() 
+print("\nRecords inserted") 
+conn.close()
