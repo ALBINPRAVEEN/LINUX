@@ -1,0 +1,39 @@
+AIM: Develop programs for implementing plots with matplotlib. 
+ 
+1) Creating a vertical bar chart 
+SOURCE CODE: 
+import matplotlib.pyplot as plt 
+x= ['one','two','three','four','five'] 
+y = [5,24,35,67,12] 
+plt.bar(x,y) 
+plt.xlabel("Pen sold") 
+plt.ylabel("Price") 
+plt.title("Vertical Bar Graph") 
+plt.show() 
+ 
+ 
+ 
+ 
+2) Creating a horizontal bar chart 
+SOURCE CODE: 
+import matplotlib.pyplot as plt 
+y= ['one','two','three','four','five'] 
+x = [5,24,35,67,12] 
+plt.barh(y,x) 
+plt.ylabel("Pen sold") 
+plt.xlabel("Price") 
+plt.title("Horizontal barGraph") 
+plt.show()
+
+3) Write a Python program to create a pie chart of the popularity of programming 
+languages. 
+SOURCE CODE: 
+import matplotlib.pyplot as plt 
+l='Java','Python','PHP','JavaScript','C#','C++' 
+p=[22.2,17.6,8.8,8,7.7,6.7] 
+c=["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b"] 
+e=(0.1,0,0,0,0,0) 
+plt.pie(p,explode=e,labels=l,colors=c,autopct='%1.1f%%',shadow=True,startangle=140) 
+plt.axis('Equal') 
+plt.show()
+
