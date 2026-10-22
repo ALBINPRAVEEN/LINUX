@@ -1,0 +1,119 @@
+AIM: Develop programs for numeric analysis using numpy. 
+1) NumPy program to test whether none of the elements of a given array is zero. 
+SOURCE CODE: 
+import numpy as np 
+x = np.array([1,2,3,4]) 
+print("Original Array:") 
+print(x) 
+print("Test if none of the elements of the said array is zero:") 
+print(np.all(x)) 
+x = np.array([0,1,2,3]) 
+print("Original Array:") 
+print(x) 
+print("Test if none of the elements of the said array is zero:") 
+print(np.all(x)) 
+ 
+ 
+ 
+2) NumPy program to test whether any of the elements of a given array is non-zero. 
+SOURCE CODE: 
+import numpy as np 
+x = np.array([1,0,0,0]) 
+print("Original Array:") 
+print(x) 
+print("Test whether any of the elements of a given array is non zero:") 
+print(np.any(x)) 
+x = np.array([0,0,0,0]) 
+print("Original Array:") 
+print(x) 
+print("Test any of the elements of a given array is non zero:") 
+print(np.any(x)) 
+
+3) NumPy program to create an element-wise comparison (greater, greater_equal, less 
+and less_equal) of two given arrays. 
+SOURCE CODE: 
+import numpy as np 
+x = np.array([3,5]) 
+y = np.array([2,5]) 
+print("Original Numbers:") 
+print(x) 
+print(y) 
+print("Comparison-greater") 
+print(np.greater(x,y)) 
+print("Comparison-greater_equal") 
+print(np.greater_equal(x,y)) 
+print("Comparison-less") 
+print(np.less(x,y)) 
+print("Comparison-greater") 
+print(np.less_equal(x,y)) 
+ 
+ 
+ 
+ 
+4) NumPy program to create an array with the values 1,7,13,105 and determine the size 
+of the memory occupied by the array. 
+SOURCE CODE: 
+import numpy as np 
+X = np.array([1,7,13,105]) 
+print("Original Array:") 
+print(X) 
+print("Size of the memory occupied by the said array:") 
+print("%d bytes" %(X.size * X.itemsize))
+
+
+5) NumPy program to convert a list of numeric value (12.23,13.32, 100,36.32) into a 
+one-dimensional NumPy array. 
+SOURCE CODE: 
+import numpy as np 
+I = [12.23,13.32,100,36.32] 
+print("Original List:",I) 
+a=np.array(I) 
+print("One-dimensional NumPy array:",a) 
+ 
+ 
+6) NumPy program to create a 3x3 matrix with values ranging from 2 to 10. 
+ 
+SOURCE CODE: 
+import numpy as np 
+x= np.arange(2,11).reshape(3,3) 
+print(x) 
+ 
+7) NumPy program to create an array with values ranging from 12 to 38. 
+ 
+SOURCE CODE: 
+import numpy as np 
+x= np.arange(12,38) 
+print(x) 
+ 
+8) NumPy program to reverse an array (first element becomes last). 
+ 
+SOURCE CODE: 
+import numpy as np 
+x= np.arange(12,38) 
+print(x) 
+print("Reverse Array:") 
+x=x[::-1] 
+print(x)
+
+9) NumPy program to create a 2d array with 1 on the border and 0 inside as shown in 
+the picture below. 
+SOURCE CODE: 
+import numpy as np 
+x= np.ones((5,5)) 
+print("Original array:") 
+print(x) 
+print("1 on the border and 0 inside in the array") 
+x[1:-1,1:-1]=0 
+print(x) 
+ 
+ 
+10) NumPy program to append values to the end of an array. 
+ 
+SOURCE CODE: 
+import numpy as np 
+x= [10,20,30] 
+print("Original array:") 
+print(x) 
+x=np.append(x,[[40,50,60],[70,80,90]]) 
+print("After append values to the end of the array:") 
+print(x)
